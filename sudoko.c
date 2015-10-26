@@ -4,6 +4,7 @@
 #include"sudoko.h"
 int printsuduko(){
 	int i, x = 0, y = 0, z = 0;
+	printf("\n\n");
 	for(i = 0; i < 10; i++){
 		if((z + 2) % 3 == 0){
 			printf("****||***********||***********||***********|\n");
@@ -70,6 +71,23 @@ int sudoprint(int h[10][10]){
 	return 0;
 }
 int insert(){
+	int i, j, k;
+	i = sudoko.ra;
+	j = sudoko.ca;
+	k = sudoko.va;
+	if(k < 0 || k > 9){
+		printf("Please enter a number between 1 to 9 only\n");
+		sudoprint(t);
+		return 0;
+	}
+	if(sudoko.a[i][j] == 0){
+		sudoko.a[i][j] = t[i][j] = sudoko.va;
+	}
+	else{
+		printf("number was already present in that location\n please enter another location\n");
+	}
+	sudoprint(t);
+	return 0;
 }
 int checkpos(){
 }
