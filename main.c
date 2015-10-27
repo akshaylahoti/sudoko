@@ -17,6 +17,7 @@ int printmenu_1(){
 int printmenu_2(){
 	int choice;
 	char s[32];
+	printf("\n\n\n");
 	printf("1.Insert an element in sudoko\n"\
 		"2.Remove a Digit\n"\
 		"3.Check position\n"\
@@ -34,6 +35,7 @@ int printmenu_3(){
 		"\t\t\t 2.Medium\n"\
 		"\t\t\t 3.Hard\n");
 	scanf("%[^0-9]%d", s, &choice);
+	system("clear");
 	return choice;
 }
 int main(){
@@ -49,7 +51,7 @@ int main(){
 	}
 	choice_1 = printmenu_1();
 	switch(choice_1){
-		case 1:
+		case 1: system("clear");
 			choice_2 = printmenu_3();
 			generate(choice_2);
 			sudoprint(t);
@@ -58,9 +60,8 @@ int main(){
 				switch(choice_3){
 					case 1:/*for insert*/
 						if(i == 0 || i == 1)
-							printf("Enter the position and value\n"\
-								"||while entering position enter\n"\
-								"row first and then column||\n");
+							printf("\n\nEnter the position and value\n"\
+								"||while entering position enter row first and then column||\n");
 						else
 							printf("Enter position and value\n");
 							i++;
@@ -84,12 +85,14 @@ int main(){
 						sudoprint(sudoko.c);
 						break;
 					case 6:
+						system("clear");
 						exit(0);
 						break;
 				}
 			}
 			break;
 		case 2:
+			system("clear");
 			exit(0);
 			break;
 		}

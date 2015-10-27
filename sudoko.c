@@ -75,6 +75,16 @@ int insert(){
 	i = sudoko.ra;
 	j = sudoko.ca;
 	k = sudoko.va;
+	if(i < 0 || k > 9){
+		printf("Please enter number between 1 and 9 only\n");
+		sudoprint(t);
+		return 0;
+	}
+	if(j < 0 || j > 9){
+		printf("Please enter number between 1 and 9 only\n");
+		sudoprint(t);
+		return 0;
+	}
 	if(k < 0 || k > 9){
 		printf("Please enter a number between 1 to 9 only\n");
 		sudoprint(t);
@@ -84,7 +94,7 @@ int insert(){
 		sudoko.a[i][j] = t[i][j] = sudoko.va;
 	}
 	else{
-		printf("number was already present in that location\n please enter another location\n");
+		printf("number was already present in that location\nplease enter another location\n\n\n");
 	}
 	sudoprint(t);
 	return 0;
