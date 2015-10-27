@@ -30,9 +30,9 @@ int printmenu_3(){
 	int choice;
 	char s[32];
 	printf("\t\t\t------LEVEL------\n\n\n"\
-		"\t\t\t 1.Amature\n"\
-		"\t\t\t 2.Professional\n"\
-		"\t\t\t 3.Legendry\n");
+		"\t\t\t 1.Easy\n"\
+		"\t\t\t 2.Medium\n"\
+		"\t\t\t 3.Hard\n");
 	scanf("%[^0-9]%d", s, &choice);
 	return choice;
 }
