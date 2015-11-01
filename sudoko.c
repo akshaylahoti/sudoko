@@ -100,8 +100,29 @@ int insert(){
 	return 0;
 }
 int checkpos(){
+	int i, j;
+	i = sudoko.rc;
+	j = sudoko.cc;
+	if(sudoko.c[i][j] == sudoko.a[i][j]){
+		printf("correct \n");
+	}
+	else{
+		printf("Incorrect\n");
+		printf("correct position is %d\n", sudoko.c[i][j]);
+	}
+	return 0;
 }
 int removes(){/* removes a particular value from position*/
+	int i = sudoko.ra;
+	int j = sudoko.ca;
+	if(sudoko.a[i][j] != sudoko.b[i][j])
+		sudoko.a[i][j] = t[i][j] = 0;
+	else if(sudoko.a[i][j] == 0)
+		printf("Already empty\n");
+	else if(sudoko.a[i][j] == sudoko.b[i][j])
+		printf("Value cannot be removed as this is given in the question\n");
+	sudoprint(t);
+	return 0;
 }
 int exits(){
 	exit(0);
